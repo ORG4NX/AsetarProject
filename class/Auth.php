@@ -37,7 +37,7 @@ class Auth {
             <body>
             <form action= 'conn.php' method='POST'>
             <div class='form-group'>
-            <label for='text'>$this->title</label><br>  
+            <legend>$this->title</legend>  
             <span>$this->login</span>
             <input type='text' class='form-control' id='exampleInputEmail1'  aria-describedby='emailHelp' name='login' required><br>
             <span>$this->pw</span>
