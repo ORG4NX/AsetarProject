@@ -14,7 +14,7 @@ $head = new Header();
 $foot = new Footer();
 
 // Appelle la fonction et génère le haut de page et le pied de page.
-$head->getHeader();
+echo $head->getHeader();
 
 echo "<ul class='nav justify-content-center'>
   <li class='nav-item'>
@@ -28,5 +28,5 @@ echo "<ul class='nav justify-content-center'>
   </li>
 </ul>";
 
-$foot->getFooter();
+echo $foot->getFooter();
 ?>

@@ -21,8 +21,8 @@ $bdd = new BDD("localhost", "root", "root", "ASETAR08");
 $conn = new Auth("ASETAR 08","Connexion d'un membre","Identifiant : ", "Mot de passe : ", "", "", "");
 
 // Appelle la fonction et génère le haut de page et le pied de page.
-$head->getHeader();
-$foot->getFooter();
+echo $head->getHeader();
+echo $foot->getFooter();
 
 // Utilisation de la variable superglobale $_POST pour l'envoi des identifiants de l'utilisateur.
 $login = $_POST['login'];

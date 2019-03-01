@@ -15,6 +15,6 @@ $page = new Page();
 $foot = new Footer();
 
 // Appelle la fonction et génère le haut de page et le pied de page.
-$head->getHeader();
-$page->getPage();
-$foot->getFooter();
+echo $head->getHeader();
+echo $page->getPage();
+echo $foot->getFooter();

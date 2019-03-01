@@ -8,10 +8,8 @@
      */
     class Footer {
 
-        private $footer;
-
         public function getFooter() {
-            echo "<footer class='footer' style='background-color:#ffd130;'>
+            return "<footer class='footer' style='background-color:#ffd130;'>
                           
                         <div class='container'>
                               <a href='mentions.php'>Mentions légales</a>
@@ -21,9 +19,5 @@
                  </footer>
                  </body>   
                  <html>";
-        }
-
-        public function setFooter($footer): void {
-            $this->footer = $footer;
         }
     }

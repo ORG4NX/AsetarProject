@@ -18,8 +18,8 @@ $head = new Header();
 $foot = new Footer();
 
 // Appelle la fonction et génère le haut de page et le pied de page.
-$head->getHeader();
-$foot->getFooter();
+echo $head->getHeader();
+echo $foot->getFooter();
 
 // Génère le formulaire d'inscription du nouvel utilisateur à la base de données.
 $reg = new Auth("ASETAR 08","Inscription de membre",
