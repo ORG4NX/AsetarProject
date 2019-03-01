@@ -128,7 +128,7 @@ class Auth {
     /**
      * @param mixed $header
      */
-    public function setHeader($header): void
+    public function setHeader($header)
     {
         $this->header = $header;
     }
@@ -136,7 +136,7 @@ class Auth {
     /**
      * @param mixed $title
      */
-    public function setTitle(string $title): void
+    public function setTitle($title)
     {
         $this->title = $title;
     }
@@ -144,7 +144,7 @@ class Auth {
     /**
      * @param mixed $login
      */
-    public function setLogin($login): void
+    public function setLogin($login)
     {
         $this->login = $login;
     }
@@ -152,7 +152,7 @@ class Auth {
     /**
      * @param mixed $pw
      */
-    public function setPw($pw): void
+    public function setPw($pw)
     {
         $this->pw = $pw;
     }
