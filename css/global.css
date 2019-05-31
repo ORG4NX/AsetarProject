@@ -1,5 +1,5 @@
 * {
-    font-family: "Helvetica Neue", "Arial", serif;
+    font-family: "Helvetica Neue", "Montserrat", serif;
 }
 
 html {
@@ -51,6 +51,10 @@ article {
     height: 20%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.container {
+    margin: 2px 5px 2em 0;
 }
 
 .display-4 {

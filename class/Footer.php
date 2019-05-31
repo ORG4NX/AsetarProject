@@ -12,9 +12,8 @@
             return "<footer class='footer' style='background-color:#ffd130;'>
                           
                         <div class='container'>
-                              <a href='mentions.php'>Mentions légales</a>
+                              <a href='../mentions.php'>Mentions légales</a>
                               <a href='mailto:admin@asetar08.fr'>Contacter l'administrateur</a>
-                              <a href='#'>Plan du site</a>
                         </div>
                  </footer>
                  </body>   
