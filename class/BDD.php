@@ -109,7 +109,7 @@ class BDD {
         $req = "INSERT INTO Membre VALUES (0, '$login', '$pw', '$nom', '$prenom', '$email', 3, NULL, NOW(), NULL)";
         if (isset($login) && isset($pw) && isset($nom) && isset($prenom) && isset($email)) {
             $this->pdo->exec($req);
-            echo "Inscription réussie";
+            echo "Inscription réussie!";
             header("location:conn.php");
         }
     }

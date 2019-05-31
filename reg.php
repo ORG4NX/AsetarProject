@@ -28,7 +28,7 @@ $reg = new Auth("ASETAR 08","Inscription de membre",
 echo $reg->Inscription();
 
 $login = $_POST['login'];
-$pw = md5($_POST['pw']);
+$pw = $_POST['pw'];
 $nom = $_POST['nom'];
 $prenom = $_POST['prenom'];
 $email = $_POST['email'];

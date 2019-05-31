@@ -1,5 +1,5 @@
 * {
-    font-family: "Helvetica Neue", "Arial";
+    font-family: "Helvetica Neue", "Arial", serif;
 }
 
 html {
@@ -51,4 +51,8 @@ article {
     height: 20%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.display-4 {
+    background-image: url(../images/concert.png);
 }

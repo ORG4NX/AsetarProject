@@ -26,7 +26,7 @@ echo $foot->getFooter();
 
 // Utilisation de la variable superglobale $_POST pour l'envoi des identifiants de l'utilisateur.
 $login = $_POST['login'];
-$pw = md5($_POST['pw']);
+$pw = $_POST['pw'];
 
 // Appelle la fonction de connexion de l'identifiant et de mot de passe de l'utilisateur.
 $log1 = $bdd->SelectLogin($login);

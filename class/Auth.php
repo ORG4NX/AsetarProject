@@ -113,7 +113,7 @@ class Auth {
                         }]
                       });
                     },
-                    // Execute le paiment
+                    // Execute le paiement
                     onAuthorize: function(data, actions) {
                       return actions.payment.execute().then(function() {
                         // Affiche un message de confirmation à l'acheteur
