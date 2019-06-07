@@ -20,10 +20,46 @@ echo "<div class='position-relative overflow-hidden p-3 text-center bg-medium'>
   <div class='col-md-5 p-lg-5 mx-auto my-5'>
     <h1 class='display-4 font-weight-normal'>Goodies</h1>
     <p class='lead font-weight-normal'>Voici la page dédiée aux goodies mis en vente par l'association.</p>
-    <a class='btn btn-outline-warning' href='#'>Coming soon</a>
+        <div class='tab-content'>
+            <div class='tab-pane active' id='1'>
+                <div class='row'>
+                    <div class='col-sm-8 col-md-4'>
+                        <div class='thumbnail'>
+                            <img src='images/m1.png' alt='...'>
+                            <div class='price'>15,00€</div>
+                            <div class='caption'>
+                                <h4>T-Shirt AEM</h4>
+                                <p>Arborez ce magnifique t-shirt aux couleurs de l'association!</p>
+                                <a href='#' class='btn btn-order' role='button'><span class='glyphicon glyphicon-shopping-cart'></span>Commander</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-sm-6 col-md-4'>
+                        <div class='thumbnail'>
+                            <img src='images/m2.png' alt='...'>
+                            <div class='price'>15,00€</div>
+                            <div class='caption'>
+                                <h4>Sweat AEM</h4>
+                                <p>Arborez ce magnifique sweat aux couleurs de l'association!</p>
+                                <a href='#' class='btn btn-order' role='button'><span class='glyphicon glyphicon-shopping-cart'></span>Commander</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-sm-6 col-md-4'>
+                        <div class='thumbnail'>
+                            <img src='images/m3.png' alt='...'>
+                            <div class='price'>15,00€</div>
+                            <div class='caption'>
+                                <h4>Porte-clé AEM</h4>
+                                <p>Arborez ce magnifique porte-clé aux couleurs de l'association!</p>
+                                <a href='#' class='btn btn-order' role='button'><span class='glyphicon glyphicon-shopping-cart'></span>Commander</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
   </div>
-  <div class='product-device shadow-sm d-none d-md-block'></div>
-  <div class='product-device product-device-2 shadow-sm d-none d-md-block'></div>
 </div>";
 
 echo $foot->getFooter();

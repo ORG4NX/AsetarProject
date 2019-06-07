@@ -51,7 +51,6 @@ class Header {
                       <a class='nav-item nav-link active' href='index.php'>Accueil</a>
                       <a class='nav-item nav-link active' href='conn.php'>Connexion</a>
                       <a class='nav-item nav-link active' href='reg.php'>Inscription</a>
-                      <a class='nav-item nav-link active' href='services.php'>Services</a>
                       <a class='nav-item nav-link active' href='apropos.php'>A propos</a>
                     </div>
                     

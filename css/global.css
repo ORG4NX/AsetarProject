@@ -56,3 +56,8 @@ article {
 .container {
     margin: 2px 5px 2em 0;
 }
+
+.thumbnail img {
+    max-width: 100%;
+    height: 45%;
+}
