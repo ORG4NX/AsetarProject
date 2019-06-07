@@ -17,7 +17,7 @@ $foot = new Footer();
 echo $head->getHeader();
 
 echo "<div class='position-relative overflow-hidden p-3 text-center bg-medium'>
-  <div class='col-md-5 p-lg-5 mx-auto my-5'>
+  
     <h1 class='display-4 font-weight-normal'>Goodies</h1>
     <p class='lead font-weight-normal'>Voici la page dédiée aux goodies mis en vente par l'association.</p>
         <div class='tab-content'>
@@ -59,7 +59,6 @@ echo "<div class='position-relative overflow-hidden p-3 text-center bg-medium'>
                 </div>
             </div>
         </div>
-  </div>
 </div>";
 
 echo $foot->getFooter();
