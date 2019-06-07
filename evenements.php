@@ -20,7 +20,7 @@ echo "<div class='position-relative overflow-hidden p-3 text-center bg-medium' s
 <div class='col-md-5 p-lg-5 mx-auto my-5'>
     <h1 class='display-4 font-weight-normal'>Evènements</h1>
     <p class='lead font-weight-normal'>Voici la page dédiée aux évènements organisés par l'association.</p>
-    <a class='btn btn-outline-secondary' href='#'>Coming soon</a>
+    <a class='btn btn-outline-warning' href='#'>Coming soon</a>
   </div>
   <div class='product-device shadow-sm d-none d-md-block'></div>
   <div class='product-device product-device-2 shadow-sm d-none d-md-block'></div>
