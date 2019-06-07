@@ -22,8 +22,6 @@ echo "<div class='position-relative overflow-hidden p-3 text-center bg-medium'>
     <p class='lead font-weight-normal'>Voici la page dédiée aux tournois organisés par l'association.</p>
     <a class='btn btn-outline-warning' href='#'>Coming soon</a>
   </div>
-  <div class='product-device shadow-sm d-none d-md-block'></div>
-  <div class='product-device product-device-2 shadow-sm d-none d-md-block'></div>
 </div>";
 
 echo $foot->getFooter();

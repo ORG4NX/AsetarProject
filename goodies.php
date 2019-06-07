@@ -37,7 +37,7 @@ echo "<div class='position-relative overflow-hidden p-3 text-center bg-medium'>
                     <div class='col-sm-6 col-md-4'>
                         <div class='thumbnail'>
                             <img src='images/m2.png' alt='...'>
-                            <div class='price'>15,00€</div>
+                            <div class='price'>30,00€</div>
                             <div class='caption'>
                                 <h4>Sweat AEM</h4>
                                 <p>Arborez ce magnifique sweat aux couleurs de l'association!</p>
@@ -48,7 +48,7 @@ echo "<div class='position-relative overflow-hidden p-3 text-center bg-medium'>
                     <div class='col-sm-6 col-md-4'>
                         <div class='thumbnail'>
                             <img src='images/m3.png' alt='...'>
-                            <div class='price'>15,00€</div>
+                            <div class='price'>7,50€</div>
                             <div class='caption'>
                                 <h4>Porte-clé AEM</h4>
                                 <p>Arborez ce magnifique porte-clé aux couleurs de l'association!</p>
