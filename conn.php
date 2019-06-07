@@ -17,7 +17,7 @@ $foot = new Footer();
 // Instancie l'objet de connexion à la BDD et met en relation la connexion à la base de données.
 $bdd = new BDD("localhost", "root", "root", "ASETAR08");
 
-// Génère le formualaire de connexion à la base de données.
+// Génère le formulaire de connexion à la base de données.
 $conn = new Auth("ASETAR 08","Connexion d'un membre","Identifiant : ", "Mot de passe : ", "", "", "");
 
 // Appelle la fonction et génère le haut de page et le pied de page.
