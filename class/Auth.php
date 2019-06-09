@@ -52,7 +52,7 @@ class Auth {
     public function Connect($login) {
         session_start();
         $_SESSION['login'] = $login;
-        header("location:index.php");
+        header("location:admin.php");
     }
 
     // Formulaire d'inscription au site

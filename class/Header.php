@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by PhpStorm  
- * User: admin
+ * User: index
  * Date: 26/09/2018
  * Time: 16:20
  * Classe du header en Objet
@@ -13,10 +13,9 @@ class Header {
         $head = "<head>
                     <meta charset='utf-8'>
                     <meta name='viewport' content='width=device-width, initial-scale=1'>
-                    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\" crossorigin=\"anonymous\">
+                    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO' crossorigin='anonymous'>
                     <title>ASETAR 08</title>
                     <link rel='stylesheet' href='css/global.css'>
-                    
                 </head>";
         /*
          * Utilise la variable supergloblale de session de PHP et affiche l'identifiant de l'utilisateur
@@ -34,6 +33,7 @@ class Header {
                       <a class='nav-item nav-link active' href='index.php'>Accueil</a>
                       <a class='nav-item nav-link active' href='deco.php'>Déconnexion</a>
                       <a class='nav-item nav-link active' href='services.php'>Services</a>
+                      <a class='nav-item nav-link active' href='admin.php'>Administration</a>
                       <a class='nav-item nav-link active' href='apropos.php'>A propos</a>
                     </div>
                   </div>
@@ -52,12 +52,10 @@ class Header {
                       <a class='nav-item nav-link active' href='conn.php'>Connexion</a>
                       <a class='nav-item nav-link active' href='reg.php'>Inscription</a>
                       <a class='nav-item nav-link active' href='apropos.php'>A propos</a>
-                    </div>
-                    
+                    </div>     
                   </div>
                 </nav>";
                 }
-
                 return $head;
     }
 }
