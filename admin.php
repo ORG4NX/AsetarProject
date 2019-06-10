@@ -15,6 +15,6 @@ $foot = new Footer();
 
 // Appelle la fonction et génère le haut de page et le pied de page.
 echo $head->getHeader();
-// TODO : Inclure panneau d'administration dans la page d'admin du site.
+require_once "admin/admin.php";
 echo $foot->getFooter();
 ?>

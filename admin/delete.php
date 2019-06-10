@@ -13,7 +13,7 @@
         $statement = $db->prepare("DELETE FROM Articles WHERE id = ?");
         $statement->execute(array($id));
         Database::disconnect();
-        header("Location: admin.php");
+        header("Location: ../admin.php");
     }
 
     function checkInput($data) 
@@ -47,7 +47,7 @@
                     <p class="alert alert-warning">Etes vous sur de vouloir supprimer ?</p>
                     <div class="form-actions">
                       <button type="submit" class="btn btn-warning">Oui</button>
-                      <a class="btn btn-outline-secondary" href="admin.php">Non</a>
+                      <a class="btn btn-outline-secondary" href="../admin.php">Non</a>
                     </div>
                 </form>
             </div>

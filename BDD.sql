@@ -13,7 +13,9 @@ SET time_zone = "+00:00";
 --
 -- Database: `ASETAR08`
 --
+CREATE DATABASE ASETAR08;
 
+USE ASETAR08;
 -- --------------------------------------------------------
 
 --

@@ -59,7 +59,7 @@
                     </form>
                     <br>
                     <div class="form-actions">
-                      <a class="btn btn-primary" href="admin.php"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a>
+                      <a class="btn btn-primary" href="../admin.php"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a>
                     </div>
                 </div> 
                 <div class="col-sm-6 site">

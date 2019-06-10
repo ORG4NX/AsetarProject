@@ -88,7 +88,7 @@
                 $statement->execute(array($name,$description,$price,$category,$id));
             }
             Database::disconnect();
-            header("Location: admin.php");
+            header("Location: ../admin.php");
         }
         else if($isImageUpdated && !$isUploadSuccess)
         {
@@ -190,7 +190,7 @@
                         <br>
                         <div class="form-actions">
                             <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span> Modifier</button>
-                            <a class="btn btn-primary" href="admin.php"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a>
+                            <a class="btn btn-primary" href="../admin.php"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a>
                        </div>
                     </form>
                 </div>

@@ -75,7 +75,7 @@
             $statement = $db->prepare("INSERT INTO Articles (name,description,price,category,image) values(?, ?, ?, ?, ?)");
             $statement->execute(array($name,$description,$price,$category,$image));
             Database::disconnect();
-            header("Location: admin.php");
+            header("Location: ../admin.php");
         }
     }
 
@@ -144,7 +144,7 @@
                     <br>
                     <div class="form-actions">
                         <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span> Ajouter</button>
-                        <a class="btn btn-primary" href="admin.php"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a>
+                        <a class="btn btn-primary" href="../admin.php"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a>
                    </div>
                 </form>
             </div>
