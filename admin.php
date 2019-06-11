@@ -14,7 +14,7 @@ $head = new Header();
 $foot = new Footer();
 
 // Appelle la fonction et génère le haut de page et le pied de page.
-echo $head->getHeader();
+echo $head->getHeader($bdd);
 require_once "admin/admin.php";
 echo $foot->getFooter();
 ?>

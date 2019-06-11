@@ -140,14 +140,13 @@ class BDD {
         return $pwd;
     }
 
-    public function SelectAcces($type_acces) {
+    public function SelectAcces($login) {
 
         $bdd = new BDD("localhost", "root", "root", "ASETAR08");
-        $sql = "SELECT * FROM Membre WHERE type_acces = '$type_acces'";
-        $req = $bdd->getPdo()->query($sql);
+        $sql = "SELECT type_acces FROM Membre WHERE login = '$login'";
 
-        while($data = $req->fetch()) {
-            $type_acces = $data["type_acces"];
+        foreach($bdd->getPdo()->query($sql) as $row) {
+            $type_acces = $row["type_acces"];
         }
         return $type_acces;
     }

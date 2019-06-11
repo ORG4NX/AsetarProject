@@ -10,12 +10,12 @@
 // Inclut et exécute le fichier spécifié en argument.
 require "import.php";
 
+// Instancie l'objet de connexion à la BDD et met en relation la connexion à la base de données.
+$bdd = new BDD("localhost", "root", "root", "ASETAR08");
+
 // Instancie les objets de haut de page et de pied de page.
 $head = new Header();
 $foot = new Footer();
-
-// Instancie l'objet de connexion à la BDD et met en relation la connexion à la base de données.
-$bdd = new BDD("localhost", "root", "root", "ASETAR08");
 
 // Génère le formulaire de connexion à la base de données.
 $conn = new Auth("ASETAR 08","Connexion d'un membre","Identifiant : ", "Mot de passe : ", "", "", "");
@@ -27,12 +27,11 @@ echo $foot->getFooter();
 // Utilisation de la variable superglobale $_POST pour l'envoi des identifiants de l'utilisateur.
 $login = $_POST['login'];
 $pw = $_POST['pw'];
-$type_acces = $_POST['type_acces'];
 
 // Appelle la fonction de connexion de l'identifiant et de mot de passe de l'utilisateur.
 $log1 = $bdd->SelectLogin($login);
 $pw1 = $bdd->SelectMdp($pw);
-$type_acces1 = $bdd->SelectAcces($type_acces);
+$_SESSION["type_acces"] = $bdd->SelectAcces($login);
 
     // Boucle if permettant de savoir si l'utilisateur a bien renseigné ses identifiants sinon erreur de connexion.
     if (isset($login) && isset($pw)) {
