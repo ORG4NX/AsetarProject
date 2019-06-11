@@ -41,10 +41,28 @@ class Auth {
             <span>$this->login</span>
             <input type='text' class='form-control' id='exampleInputEmail1'  aria-describedby='emailHelp' name='login' required><br>
             <span>$this->pw</span>
-            <input type='password' class='form-control' id='exampleInputEmail1'  aria-describedby='emailHelp' placeholder='De préférence avec des caractères spéciaux' name='pw' required><br> 
+            <input type='password' class='form-control' id='exampleInputEmail1'  aria-describedby='emailHelp' name='pw' required><br> 
             <input type='submit' name='send' value='Envoyer'>
             </div>
             <a href='reg.php'>Nouveau membre ?</a>
+            </form>";
+    }
+
+    // Formulaire de réglage pour l'utilisateur
+    public function Update() {
+        echo " <title>$this->header</title>
+            <link rel='stylesheet' href='css/global.css'>  
+            </head>
+            <body>
+            <form action= 'reglage.php' method='POST'>
+            <div class='form-group'>
+            <legend>$this->title</legend>  
+            <span>$this->pw</span>
+            <input type='password' class='form-control' id='exampleInputEmail1'  aria-describedby='emailHelp' name='email' required><br>
+            <span>$this->email</span>
+            <input type='text' class='form-control' id='exampleInputEmail1'  aria-describedby='emailHelp' name='pw' required><br> 
+            <input type='submit' name='send' value='Envoyer'>
+            </div>
             </form>";
     }
 
@@ -155,6 +173,14 @@ class Auth {
     public function setPw($pw)
     {
         $this->pw = $pw;
+    }
+
+    /**
+     * @param mixed $setpw
+     */
+    public function setSetpw($setpw)
+    {
+        $this->setpw = $setpw;
     }
 
     /**

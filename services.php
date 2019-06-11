@@ -18,15 +18,14 @@ echo $head->getHeader();
 
 echo "<ul class='nav justify-content-center'>
   <li class='nav-item'>
-    <a class='btn btn-warning' href='evenements.php'>Evenements</a>
+    <a class='btn btn-warning btn-lg' href='evenements.php'>Evenements</a>
   </li>
   <li class='nav-item'>
-    <a class='btn btn-warning' href='tournois.php'>Tournois</a>
+    <a class='btn btn-warning btn-lg' href='tournois.php'>Tournois</a>
   </li>
   <li class='nav-item'>
-    <a class='btn btn-warning' href='goodies.php'>Goodies</a>
+    <a class='btn btn-warning btn-lg' href='goodies.php'>Goodies</a>
   </li>
 </ul>";
 
 echo $foot->getFooter();
-?>

@@ -39,6 +39,13 @@ class Header {
             $head .= "</div>
                           </div>
                         </nav>";
+
+            if ($_SESSION['type_acces'] == 2) {
+                $head .= "<a class='nav-item nav-link' href='reglage.php'>Réglages utilisateur</a>";
+            }
+            $head .= "</div>
+                          </div>
+                        </nav>";
         }
 
         else {

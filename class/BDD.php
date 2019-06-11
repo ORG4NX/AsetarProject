@@ -106,11 +106,31 @@ class BDD {
 
     // Requête SQL permettant l'inscription d'un nouveau membre dans la base de données.
     public function Insert($login, $pw, $nom, $prenom, $email) {
-        $req = "INSERT INTO Membre VALUES (0, '$login', '$pw', '$nom', '$prenom', '$email', 3, NULL, NOW(), NULL)";
+        $req = "INSERT INTO Membre VALUES (0, '$login', '$pw', '$nom', '$prenom', '$email', 2, NULL, NOW(), NULL)";
         if (isset($login) && isset($pw) && isset($nom) && isset($prenom) && isset($email)) {
             $this->pdo->exec($req);
             echo "Inscription réussie!";
             header("location:conn.php");
+        }
+    }
+
+    // Requête SQL permettant la modification du mot de passe d'un membre dans la base de données.
+    public function UpdatePw($pw) {
+        $req = "UPDATE Membre SET ('$pw')";
+        if ($pw) {
+            $this->pdo->exec($req);
+            echo "Modification réussie!";
+            header("location:deco.php");
+        }
+    }
+
+    // Requête SQL permettant la modification du mot de passe d'un membre dans la base de données.
+    public function UpdateEmail($email) {
+        $req = "UPDATE Membre SET ('$email')";
+        if ($email) {
+            $this->pdo->exec($req);
+            echo "Modification réussie!";
+            header("location:deco.php");
         }
     }
 
