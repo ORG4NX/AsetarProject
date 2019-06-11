@@ -33,15 +33,23 @@ class Header {
                       <a class='nav-item nav-link active' href='index.php'>Accueil</a>
                       <a class='nav-item nav-link active' href='deco.php'>Déconnexion</a>
                       <a class='nav-item nav-link active' href='services.php'>Services</a>
-                      <a class='nav-item nav-link active' href='admin.php'>Administration</a>
                       <a class='nav-item nav-link active' href='apropos.php'>A propos</a>
                     </div>
                   </div>
                 </nav>";
 
-                }
-                else {
-                    $head .= "<div id='user'>Non connecté.</div>" .
+            if (isset($_SESSION["type_acces"])) {
+                            $reponse = $bdd->query("SELECT type_acces FROM Membre WHERE email= '{$_SESSION['email']}' ");
+                            $data = $reponse->fetch();
+                            $type_acces = $data['type_acces'];
+                            if ($type_acces == 1) {
+                                echo "<a class='nav-item nav-link active' href='admin.php'>Administration</a>";
+                            }
+                            return $bdd;
+                        }
+        }
+        else {
+            $head .= "<div id='user'>Non connecté.</div>" .
 
                 "<a class='img-fluid' href='index.php'><img src='images/AEM.png' width='15%' height='22%'></a> 
                 <nav class='navbar navbar-expand-lg navbar-light' style='background-color:#ffd130;'

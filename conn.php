@@ -27,10 +27,12 @@ echo $foot->getFooter();
 // Utilisation de la variable superglobale $_POST pour l'envoi des identifiants de l'utilisateur.
 $login = $_POST['login'];
 $pw = $_POST['pw'];
+$type_acces = $_POST['type_acces'];
 
 // Appelle la fonction de connexion de l'identifiant et de mot de passe de l'utilisateur.
 $log1 = $bdd->SelectLogin($login);
 $pw1 = $bdd->SelectMdp($pw);
+$type_acces1 = $bdd->SelectAcces($type_acces);
 
     // Boucle if permettant de savoir si l'utilisateur a bien renseigné ses identifiants sinon erreur de connexion.
     if (isset($login) && isset($pw)) {

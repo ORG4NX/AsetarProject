@@ -139,4 +139,16 @@ class BDD {
         }
         return $pwd;
     }
+
+    public function SelectAcces($type_acces) {
+
+        $bdd = new BDD("localhost", "root", "root", "ASETAR08");
+        $sql = "SELECT * FROM Membre WHERE type_acces = '$type_acces'";
+        $req = $bdd->getPdo()->query($sql);
+
+        while($data = $req->fetch()) {
+            $type_acces = $data["type_acces"];
+        }
+        return $type_acces;
+    }
 }
