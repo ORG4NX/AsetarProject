@@ -11,7 +11,7 @@
 require "import.php";
 
 // Instancie l'objet de connexion à la BDD et met en relation la connexion à la base de données.
-$bdd = new BDD("localhost:8889", "root", "root", "ASETAR08");
+$bdd = new BDD("localhost", "root", "", "asetar08");
 
 // Instancie les objets de haut de page et de pied de page.
 $head = new Header();

@@ -117,7 +117,7 @@ class BDD {
     // Requête SQL permettant la connexion d'un membre existant (identifiant) dans la base de données.
     public function SelectLogin($login) {
 
-        $bdd = new BDD("localhost", "root", "root", "ASETAR08");
+        $bdd = new BDD("localhost", "root", "", "asetar08");
         $sql = "SELECT * FROM Membre WHERE login = '$login'";
         $req = $bdd->getPdo()->query($sql);
 
@@ -130,7 +130,7 @@ class BDD {
     // Requête SQL permettant la connexion d'un membre existant (mot de passe) dans la base de données.
     public function SelectMdp($pw) {
 
-        $bdd = new BDD("localhost", "root", "root", "ASETAR08");
+        $bdd = new BDD("localhost", "root", "", "asetar08");
         $sql = "SELECT * FROM Membre WHERE pw = '$pw'";
         $req = $bdd->getPdo()->query($sql);
 

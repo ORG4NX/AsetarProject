@@ -15,7 +15,7 @@ $head = new Header();
 $foot = new Footer();
 
 // Instancie l'objet de connexion à la BDD et met en relation la connexion à la base de données.
-$bdd = new BDD("localhost", "root", "root", "ASETAR08");
+$bdd = new BDD("localhost", "root", "", "asetar08");
 
 // Génère le formulaire de connexion à la base de données.
 $conn = new Auth("ASETAR 08","Connexion d'un membre","Identifiant : ", "Mot de passe : ", "", "", "");
