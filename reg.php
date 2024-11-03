@@ -7,11 +7,12 @@
  * Affichage du formulaire d'inscription du site.
  */
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 // Inclut et exécute le fichier spécifié en argument.
 require "import.php";
-
-// Instancie l'objet de connexion à la BDD et met en relation la connexion à la base de données.
-$bdd = new BDD("localhost", "root", "", "asetar08");
 
 // Instancie les objets de haut de page et de pied de page.
 $head = new Header();
@@ -21,18 +22,50 @@ $foot = new Footer();
 echo $head->getHeader();
 echo $foot->getFooter();
 
-// Génère le formulaire d'inscription du nouvel utilisateur à la base de données.
-$reg = new Auth("ASETAR 08","Inscription de membre",
-    "Identifiant :", "Mot de passe : ", "Nom : ", "Prénom : ", "Adresse Email : ");
+        // Vérifiez si la classe DatabaseAccess existe
+        if (!class_exists('DatabaseAccess')) {
+            die("La classe DatabaseAccess n'a pas été chargée correctement.");
+        }
 
-echo $reg->Inscription();
+        // Essayez de créer l'objet DatabaseAccess
+        try {
+            $db = new DatabaseAccess("sql303.infinityfree.com", "if0_37622906", "4Gd6kBQrG5", "if0_37622906_db_members");
+        } catch (Exception $e) {
+            die("Erreur lors de la création de l'objet DatabaseAccess : " . $e->getMessage());
+        }
 
-$login = $_POST['login'];
-$pw = $_POST['pw'];
-$nom = $_POST['nom'];
-$prenom = $_POST['prenom'];
-$email = $_POST['email'];
+        // Vérifiez si la classe Auth existe
+        if (!class_exists('Auth')) {
+            die("La classe Auth n'a pas été chargée correctement.");
+        }
 
+        // Essayez de créer l'objet Auth
+        try {
+            $reg = new Auth("ASETAR 08", "Inscription de membre",
+                "Identifiant :", "Mot de passe : ", "Nom : ", "Prénom : ", "Adresse Email : ", $db);
+        } catch (Exception $e) {
+            die("Erreur lors de la création de l'objet Auth : " . $e->getMessage());
+        }
 
-$bdd->Insert($login, $pw, $nom, $prenom, $email);
-$reg->Paiement();
+echo $reg->Register();
+
+        // Vérifiez si le formulaire a été soumis
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Utilisez isset() pour vérifier si les clés existent, sinon utilisez une valeur par défaut
+        $login = isset($_POST['login']) ? $_POST['login'] : '';
+        $pw = isset($_POST['pw']) ? $_POST['pw'] : '';
+        $nom = isset($_POST['nom']) ? $_POST['nom'] : '';
+        $prenom = isset($_POST['prenom']) ? $_POST['prenom'] : '';
+        $email = isset($_POST['email']) ? $_POST['email'] : '';
+
+        // Vérifiez si toutes les valeurs nécessaires sont présentes
+        if ($login && $pw && $nom && $prenom && $email) {
+            // Insérez les données dans la base de données
+            $db->Insert($login, $pw, $nom, $prenom, $email);
+            // Note: L'echo "Inscription réussie !" est déjà dans la méthode Insert()
+        } else {
+            echo "Veuillez remplir tous les champs du formulaire.";
+        }
+    }
+
+$reg->Payment();

@@ -150,16 +150,19 @@
                             <label for="name">Nom:
                             <input type="text" class="form-control" id="name" name="name" placeholder="Nom" value="<?php echo $name;?>">
                             <span class="help-inline"><?php echo $nameError;?></span>
+                            </label>
                         </div>
                         <div class="form-group">
                             <label for="description">Description:
                             <input type="text" class="form-control" id="description" name="description" placeholder="Description" value="<?php echo $description;?>">
                             <span class="help-inline"><?php echo $descriptionError;?></span>
+                            </label>
                         </div>
                         <div class="form-group">
                         <label for="price">Prix: (en €)
                             <input type="number" step="0.01" class="form-control" id="price" name="price" placeholder="Prix" value="<?php echo $price;?>">
                             <span class="help-inline"><?php echo $priceError;?></span>
+                            </label>
                         </div>
 
 
@@ -179,6 +182,7 @@
                             ?>
                             </select>
                             <span class="help-inline"><?php echo $categoryError;?></span>
+                            </label>
                         </div>
                         <div class="form-group">
                             <label for="image">Image:</label>
@@ -201,7 +205,7 @@
                           <div class="caption">
                             <h4><?php echo $name;?></h4>
                             <p><?php echo $description;?></p>
-                            <a href="#" class="btn btn-order" role="button"><span class="glyphicon glyphicon-shopping-cart"></span> Commander</a>
+                            <a href="#" class="btn btn-order" role="button"><span class="glyphicon glyphicon-shopping-cart"></span> Restocker</a>
                           </div>
                     </div>
                 </div>

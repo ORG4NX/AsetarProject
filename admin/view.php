@@ -1,4 +1,5 @@
 <?php
+    header('Content-Type: text/html; charset=utf-8');
     require 'database.php';
 
     if(!empty($_GET['id'])) 
@@ -59,7 +60,8 @@
                     </form>
                     <br>
                     <div class="form-actions">
-                      <a class="btn btn-primary" href="../admin.php"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a>
+                      <a class="btn btn-primary" href="../admin.php"><span class="glyphicon glyphicon-arrow-left"></span>Retour</a>
+                      <a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart"></span>Restocker</a>
                     </div>
                 </div> 
                 <div class="col-sm-6 site">
@@ -69,7 +71,6 @@
                           <div class="caption">
                             <h4><?php echo $item['name'];?></h4>
                             <p><?php echo $item['description'];?></p>
-                            <a href="#" class="btn btn-order" role="button"><span class="glyphicon glyphicon-shopping-cart"></span> Commander</a>
                           </div>
                     </div>
                 </div>

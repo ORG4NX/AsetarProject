@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: admin
- * Date: 11/10/2018
- * Time: 16:29
- */
 
 // Inclut et exécute le fichier spécifié en argument.
 require "import.php";

@@ -12,4 +12,4 @@ require "class/Header.php";
 require "class/Page.php";
 require "class/Footer.php";
 require "class/Auth.php";
-require "class/BDD.php";
+require "class/DatabaseAccess.php";

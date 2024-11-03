@@ -13,7 +13,7 @@
         <h1 class="text-logo"><span class="glyphicon glyphicon-cog"></span> Panneau d'administration <span class="glyphicon glyphicon-cog"></span></h1>
         <div class="container admin">
             <div class="row">
-                <h1><strong>Liste des Articles   </strong><a href="admin/insert.php" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-plus"></span> Ajouter</a></h1><br>
+                <h1><strong>Liste des Articles      </strong><a href="admin/insert.php" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-plus"></span>Ajouter</a></h1><br>
                 <table class="table table-striped table-bordered">
                   <thead>
                     <tr>
@@ -29,6 +29,7 @@
                         require 'database.php';
                         $db = Database::connect();
                         $statement = $db->query('SELECT Articles.id, Articles.name, Articles.description, Articles.price, Services.name AS category FROM Articles LEFT JOIN Services ON Articles.category = Services.id ORDER BY Articles.id DESC');
+
                         while($item = $statement->fetch()) 
                         {
                             echo '<tr>';
