@@ -29,7 +29,12 @@ echo $foot->getFooter();
 
         // Essayez de créer l'objet DatabaseAccess
         try {
-            $db = new DatabaseAccess("sql303.infinityfree.com", "if0_37622906", "4Gd6kBQrG5", "if0_37622906_db_members");
+            $db = new DatabaseAccess(
+                getenv('DB_HOST') ?: "sql303.infinityfree.com",
+                getenv('DB_USER') ?: "if0_37622906",
+                getenv('DB_PASSWORD') ?: "4Gd6kBQrG5",
+                getenv('DB_NAME') ?: "if0_37622906_db_members"
+            );
         } catch (Exception $e) {
             die("Erreur lors de la création de l'objet DatabaseAccess : " . $e->getMessage());
         }

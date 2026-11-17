@@ -1,0 +1,6 @@
+.git
+.idea
+.vs
+Dockerfile
+.dockerignore
+BDD.sql

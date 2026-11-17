@@ -15,7 +15,12 @@ class Database
         {
             try
             {
-              self::$connection = new PDO("mysql:host=" . self::$dbHost . ";dbname=" . self::$dbName , self::$dbUsername, self::$dbUserpassword);
+              // Variables DB_* en Docker, sinon valeurs d'origine
+              $host = getenv('DB_HOST') ?: self::$dbHost;
+              $name = getenv('DB_NAME') ?: self::$dbName;
+              $user = getenv('DB_USER') ?: self::$dbUsername;
+              $pass = getenv('DB_PASSWORD') !== false ? getenv('DB_PASSWORD') : self::$dbUserpassword;
+              self::$connection = new PDO("mysql:host=" . $host . ";dbname=" . $name . ";charset=utf8", $user, $pass);
             }
             catch(PDOException $e)
             {
