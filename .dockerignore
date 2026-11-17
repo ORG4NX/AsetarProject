@@ -4,3 +4,8 @@
 Dockerfile
 .dockerignore
 BDD.sql
+.env
+.env.example
+.gitignore
+compose.yaml
+README.md

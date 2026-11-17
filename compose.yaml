@@ -1,0 +1,44 @@
+name: asetar
+
+# Site ASETAR (PHP/Apache) + base MariaDB.
+#   docker compose up -d --build     -> http://127.0.0.1:8088
+# Exposé sur le tailnet par le sidecar encrypto (https://encrypto.<tailnet>.ts.net:8443).
+services:
+  asetar:
+    build: .
+    image: asetar:latest
+    ports:
+      - "127.0.0.1:8088:80"                  # local uniquement ; le tailnet passe par encrypto
+    environment:
+      - DB_HOST=db
+      - DB_NAME=ASETAR08
+      - DB_USER=asetar
+      - DB_PASSWORD=${ASETAR_DB_PASSWORD}
+    volumes:
+      - images:/var/www/html/images          # images envoyées depuis l'admin
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  db:
+    image: mariadb:11
+    environment:
+      - MARIADB_DATABASE=ASETAR08
+      - MARIADB_USER=asetar
+      - MARIADB_PASSWORD=${ASETAR_DB_PASSWORD}
+      - MARIADB_RANDOM_ROOT_PASSWORD=1
+    volumes:
+      - db:/var/lib/mysql
+      - ./BDD.sql:/docker-entrypoint-initdb.d/BDD.sql:ro   # chargé au 1er démarrage seulement
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    restart: unless-stopped
+
+volumes:
+  db:
+  images:
