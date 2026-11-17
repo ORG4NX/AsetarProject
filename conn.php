@@ -7,8 +7,13 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// Instanciation de DatabaseAccess
-$db = new DatabaseAccess("sql303.infinityfree.com", "if0_37622906", "4Gd6kBQrG5", "if0_37622906_db_members");
+// Instanciation de DatabaseAccess (variables DB_* en Docker, sinon valeurs d'origine)
+$db = new DatabaseAccess(
+    getenv('DB_HOST') ?: "sql303.infinityfree.com",
+    getenv('DB_USER') ?: "if0_37622906",
+    getenv('DB_PASSWORD') ?: "4Gd6kBQrG5",
+    getenv('DB_NAME') ?: "if0_37622906_db_members"
+);
 
 // Instanciation de Auth
 $auth = new Auth("ASETAR 08", "Connexion", "Identifiant :", "Mot de passe :", "", "", "", $db);
